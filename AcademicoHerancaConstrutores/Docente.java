@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Docente extends Usuario {
 
   protected String SIAPE;
@@ -8,7 +6,7 @@ public class Docente extends Usuario {
     System.out.println("Novo objeto docente criado!");
   }
 
-  Docente(String CPF, String nome, Date dataNascimento, String SIAPE) {
+  Docente(String CPF, String nome, String dataNascimento, String SIAPE) {
     super(CPF, nome, dataNascimento);
     this.setSIAPE(SIAPE);
     System.out.println("Objeto do tipo docente com SIAPE");

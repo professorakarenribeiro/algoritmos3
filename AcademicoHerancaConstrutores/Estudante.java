@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Estudante extends Usuario {
   protected String RGA;
 
@@ -7,7 +5,7 @@ public class Estudante extends Usuario {
     System.out.println("Novo objeto estudante criado!");
   }
 
-  Estudante(String CPF, String nome, Date dataNascimento, String RGA) {
+  Estudante(String CPF, String nome, String dataNascimento, String RGA) {
     super(CPF, nome, dataNascimento);
     this.setRGA(RGA);
     System.out.println("Objeto do tipo estudante com RGA");

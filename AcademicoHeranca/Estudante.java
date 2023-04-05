@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Estudante extends Usuario {
   protected String RGA;
 

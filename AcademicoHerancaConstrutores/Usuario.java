@@ -1,15 +1,11 @@
-import java.util.Date;
-
 public class Usuario {
-  protected String CPF;
-  protected String nome;
-  protected Date dataNascimento;
-
+  protected String CPF, nome, dataNascimento;
+  
   Usuario() {
     System.out.println("Novo objeto usuário criado!");
   }
 
-  Usuario(String CPF, String nome, Date dataNascimento) {
+  Usuario(String CPF, String nome, String dataNascimento) {
     this.setCPF(CPF);
     this.setNome(nome);
     this.setDataNascimento(dataNascimento);
@@ -32,11 +28,11 @@ public class Usuario {
     this.nome = nome;
   }
 
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
 
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
