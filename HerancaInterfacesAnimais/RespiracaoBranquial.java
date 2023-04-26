@@ -1,0 +1,3 @@
+interface RespiracaoBranquial{
+  void respirar();
+}
