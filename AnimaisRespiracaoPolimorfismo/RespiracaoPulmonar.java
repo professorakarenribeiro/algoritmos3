@@ -1,0 +1,5 @@
+interface RespiracaoPulmonar{
+
+  void respirar();
+  
+}
