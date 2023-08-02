@@ -1,48 +1,39 @@
 /*
-* Classe principal para aula de Encapsulamento
+* Classe principal para aula sobre Encapsulamento
 * Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
 */
 import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
-    
-    Scanner entrada = new Scanner(System.in);
-    
-   //  //cria instâncias/objetos da classe Triangulo
-   //  Triangulo t1 = new Triangulo();
 
-    
-   // Triangulo t2 = new Triangulo();
-    
-   //  System.out.println("Informe um valor de BASE para o triângulo 1:");
-   //  t1.setBase(entrada.nextDouble());
-   //  System.out.println("Informe um valor de ALTURA para o triângulo 1:");
-   //  t1.setAltura(entrada.nextDouble());
-    
-   //  System.out.println("Informe um valor de BASE para o triângulo 2:");
-   //  t2.setBase(entrada.nextDouble());
-   //  System.out.println("Informe um valor de ALTURA para o triângulo 2:");
-   //  t2.setAltura(entrada.nextDouble());
-    
-   //  System.out.println("A área do triângulo 1 é: " + Double.toString(t1.calcularArea()));
-   //  System.out.println("A área do triângulo 2 é: " + Double.toString(t2.calcularArea()));
+    // Objetos Scanner para leitura de dados via teclado na console.
+    Scanner entradaDouble = new Scanner(System.in);
+    Scanner entradaString = new Scanner(System.in);
 
-    // // SOLUÇÃO ALTERNATIVA USANDO VETOR 
-    Triangulo[] triangulos = new Triangulo[3];
-    
-    for (int i = 0; i < triangulos.length; i++) {
-      Triangulo t = new Triangulo();
-      System.out.println("Informe um valor de BASE para o triângulo " + i + ":");
-      t.setBase(entrada.nextDouble());
-      System.out.println("Informe um valor de ALTURA para o triângulo " + i + ":");
-      t.setAltura(entrada.nextDouble());
-      triangulos[i] = t;
-    }
+    // Instância da classe Triangulo
+    Triangulo t = new Triangulo();
 
-    for (int i = 0; i < triangulos.length; i++) {
-      System.out.println("A área do triângulo " + i + " é " + triangulos[i].calcularArea());
-    }
+    // Atributos para manipulação
+    String continua;
+
+    // Recebe dados para calcular a área de um triângulo enquanto ENTER for informado na console
+    do {
+      System.out.println("--CALCULADORA DE ÁREA DE UM TRIÂNGULO--");
+      
+      System.out.println("Informe um valor de BASE para o triângulo:");
+      t.setBase(entradaDouble.nextDouble()); // Lê o próximo double digitado na console
+      System.out.println("Informe um valor de ALTURA para o triângulo:");
+      t.setAltura(entradaDouble.nextDouble()); // Lê o próximo double digitado na console
+      
+      System.out.println("A área do triângulo informado é: " + Double.toString(t.calcularArea()));
+      
+      System.out.println("Deseja continuar? Digite ENTER para calcular a área de mais um triângulo.");
+      continua = entradaString.nextLine(); // Lê a próxima string digitada na console
     
-  
+    } while (continua.isEmpty());
+    // Fecha os scanners de teclado
+    entradaString.close();
+    entradaDouble.close();
   }
 }
