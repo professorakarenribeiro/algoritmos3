@@ -2,25 +2,24 @@
 * Classe principal para aula introdutória à Linguagem Java
 * Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
 */
-import java.util.Scanner; //importa a classe Scanner
+import java.util.Scanner; //Importa a classe Scanner
 class Main {
   public static void main(String[] args) {
     
-    //cria um Scanner para obter entrada a partir da console
+    //Cria um Scanner para obter entrada a partir da console
     Scanner entrada = new Scanner(System.in);
     
-    //cria uma nova instância/objeto da classe Triangulo
+    //Cria uma nova instância/objeto da classe Triangulo
     Triangulo t1 = new Triangulo();
     
-    //imprime o texto na saída em uma única linha
-    System.out.println("Informe um valor de base para o triângulo:");
-    
-    //lê a informação e armazena no atributo da instância
+    //Imprime o texto na saída da console em uma única linha
+    System.out.print("Informe um valor de base para o triângulo:");
+    //Lê a informação e armazena no atributo da instância
     t1.base = entrada.nextFloat();
     
-    System.out.println("Informe um valor de altura para o triângulo:");
-    
-    //lê a informação e armazena no atributo da instância
+    //Imprime o texto na saída da console em uma única linha
+    System.out.print("Informe um valor de altura para o triângulo:");
+    //Lê a informação e armazena no atributo da instância
     t1.altura = entrada.nextFloat();
     
     //Faz o cálculo da área chamando o método da instância passando os valores como parâmetros e imprime resultado em texto concatenado na saída
