@@ -1,3 +1,7 @@
+/*
+* Classe conceitual Bola para aula sobre métodos construtores
+* Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
+*/
 public class Bola {
   private String cor, material, esporte;
   private double raio;

@@ -1,7 +1,12 @@
+/*
+* Classe conceitual Pessoa para aula  sobre métodos construtores
+* Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
+*/
 public class Pessoa {
   private String nome, genero;
   private int idade;
 
+  // método construtor redefinido
   public Pessoa(String nome, int idade, String genero) {
     this.nome = nome;
     this.idade = idade;

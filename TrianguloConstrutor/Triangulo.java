@@ -1,19 +1,19 @@
+/*
+* Classe conceitual Triangulo para aula sobre Método Construtor 
+* Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
+*/
 public class Triangulo {
 
-  private double base, altura, l1, l2, l3, area;
+  private double base, altura, area;
 
-  Triangulo(){
-    //construtor default
+  Triangulo() {
+    // construtor default
   }
-  Triangulo(double base, double altura){
+
+  // Método construtor por base e altura
+  Triangulo(double base, double altura) {
     this.base = base;
     this.altura = altura;
-  }
-
-  Triangulo(double l1, double l2, double l3){
-    this.l1 = l1;
-    this.l2 = l2;
-    this.l3 = l3;
   }
 
   public double getBase() {
@@ -32,30 +32,6 @@ public class Triangulo {
     this.altura = altura;
   }
 
-  public double getL1() {
-    return l1;
-  }
-
-  public void setL1(double l1) {
-    this.l1 = l1;
-  }
-
-  public double getL2() {
-    return l2;
-  }
-
-  public void setL2(double l2) {
-    this.l2 = l2;
-  }
-
-  public double getL3() {
-    return l3;
-  }
-
-  public void setL3(double l3) {
-    this.l3 = l3;
-  }
-
   public double getArea() {
     return area;
   }
@@ -64,9 +40,14 @@ public class Triangulo {
     this.area = area;
   }
 
+  // Método para cálculo da área do triangulo via base e altura
   public double calcularArea() {
-    double area = (this.getBase() + this.getAltura())/ 2;
-    this.setArea(area);
-    return area;
+    if (base > 0 && altura > 0) {
+      area = base * altura / 2;
+      return area;
+    } else {
+      System.out.println("Os valores de base e altura devem ser maiores do que 0 para o cálculo da área do triângulo.");
+      return 0;
+    }
   }
 }

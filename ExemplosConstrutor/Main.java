@@ -1,6 +1,9 @@
+/*
+* Classe principal para aula sobre métodos construtores
+* Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
+*/
 class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
 
     Pessoa p1 = new Pessoa("Fei-Fei Li", 47, "feminino");
     System.out.println(p1.getNome());
