@@ -6,10 +6,15 @@ class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
 
-    Peixe p1 = new PeixePalhaco();
-    Peixe p2 = new Piramboia();
+    Pato p = new Pato();
+    p.nadar(10);
+    p.caminhar(15);
+    p.pular();
 
-    p1.respirar();
-    p2.respirar();
+    Tubarao t = new Tubarao();
+    t.nadar(20);
+    LocomocaoAquatica.motif();
+    System.out.println(LocomocaoAquatica.texto);
+
   }
 }
