@@ -1,3 +1,8 @@
+/*
+* Projeto Respiração de Animais em Java para aula introdutória de Polimorfismo
+* Conteúdo elaborado para fins educativos por Prof.ª Dr.ª Karen Ribeiro (karen@ic.ufmt.br)
+* 
+*/
 import java.util.ArrayList;
 
 class Main {
@@ -18,7 +23,7 @@ class Main {
 
     /*
      * executando série de respiração coletivamente via método polimórfico
-     * respirar()
+     * respirar() usando ArrayList
      */
     ArrayList<Animal> listaAnimais = new ArrayList<Animal>();
     listaAnimais.add(p1);
