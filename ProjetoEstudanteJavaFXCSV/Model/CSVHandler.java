@@ -4,7 +4,7 @@ package Model;
 public class CSVHandler {
   private String arquivoCSV = "estudantes.csv"; // Nome do arquivo CSV
   
-  private void carregarDadosCSV() { // Método para carregar os dados do arquivo CSV
+  public void carregarDadosCSV() { // Método para carregar os dados do arquivo CSV
     try (BufferedReader br = new BufferedReader(new FileReader(arquivoCSV))) {
         String linha; // Variável para armazenar cada linha do arquivo CSV
         while ((linha = br.readLine()) != null) { // Lê cada linha do arquivo CSV
@@ -19,7 +19,7 @@ public class CSVHandler {
     }
   }
 
-  private void salvarDadosCSV() { // Método para salvar os dados do arquivo CSV
+  public void salvarDadosCSV() { // Método para salvar os dados do arquivo CSV
     try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoCSV))) {
         for (Estudante estudante : listaDadosEstudantes) { // Percorre a lista de objetos Estudante
             bw.write(estudante.getRGA() + "," + estudante.getNome()); // Escreve os dados do objeto Estudante no arquivo CSV
